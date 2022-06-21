@@ -1,164 +1,175 @@
-<p align="center">
-<img src="https://telegra.ph/file/06db0eb84b88d11d76e6a.jpg" alt="SHIRAORI BOT" width="500"/>
+# wabot-aq-md
 
+Simple WhatsApp Bot
 
-</p>
-<p align="center">
-<a href="#"><img title="SHIRAORI BOT MULTI DEVICE" src="https://img.shields.io/badge/SHIRAORI BOT MULTI DEVICE-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
-</p>
-<p align="center">
-<a href="https://github.com/ilmanhdyt/ShiraoriBOT-Md"><img title="Author" src="https://img.shields.io/badge/Author-Ilman-red.svg?style=for-the-badge&logo=github"></a>
-</p>
-<p align="center">
-<a href="https://github.com/ilmanhdyt/ShiraoriBOT-Md"><img title="Followers" src="https://img.shields.io/github/followers/ilmanhdyt?color=blue&style=flat-square"></a>
-<a href="https://github.com/ilmanhdyt/ShiraoriBOT-Md"><img title="Stars" src="https://img.shields.io/github/stars/ilmanhdyt/ShiraoriBOT-Md?color=red&style=flat-square"></a>
-<a href="https://github.com/ilmanhdyt/ShiraoriBOT-Md/network/members"><img title="Forks" src="https://img.shields.io/github/forks/ilmanhdyt/ShiraoriBOT-Md?color=red&style=flat-square"></a>
-<a href="https://github.com/ilmanhdyt/ShiraoriBOT-Md/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/ilmanhdyt/ShiraoriBOT-Md?label=Watchers&color=blue&style=flat-square"></a>
-</p>
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Nurutomo26/wabot-aq-md)
 
----
-
-# SHIRAORI BOT Whatsapp MD
-
-## Information
-> ShiraoriBOT whatsapp using a Baileys library.
-> Jika kamu menemukan semacam bug, harap untuk dimaklumi sementara
->
-> • NOTE: Pastikan Jaringan kalian lancar dan device kalian bagus:v, 
-> 
-> • Kalo pake termux mungkin bakal lama respon nya, saya sarankan pake heroku
-
-<h3 align="center">Made by :</h3>
-<p align="center">
-  <a href="https://github.com/ilmanhdyt"><img src="https://github.com/ilmanhdyt.png?size=128" height="128" width="128" /></a>
-  <a href="https://github.com/BochilGaming"><img src="https://github.com/BochilGaming.png?size=128" height="128" width="128" /></a>
-</p>
-
-## Tester Bot
-* Jika kamu menemukan bug jangan lupa buka Issues
-* Info Lebih Lanjut, Chat [owner-Shiraori](https://wa.me/6281351047727)
-* Kamu bisa testing fitur ShiraoriBOT [disini](https://wa.me/62895803135347?text=.menu)
-
-## How To Change Menu Display
-----
-### Gif Menu Display
-```ts
- let message = await prepareWAMessageMedia({ video: fs.readFileSync('./media/shiro.mp4'), gifPlayback: true }, { upload: conn.waUploadToServer })
-     const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
-     templateMessage: {
-         hydratedTemplate: {
-           videoMessage: message.videoMessage,
-           hydratedContentText: text.trim(),
-           hydratedFooterText: wm,
-           hydratedButtons: [{
-```
-
-### Image Menu Display
-```ts
-let message = await prepareWAMessageMedia({ image: fs.readFileSync('./media/shiraori.jpg')}, { upload: conn.waUploadToServer })
-     const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
-     templateMessage: {
-         hydratedTemplate: {
-           imageMessage: message.imageMessage,
-           hydratedContentText: text.trim(),
-           hydratedFooterText: wm,
-           hydratedButtons: [{
-```
-
-### Location Menu Display
-```ts
- const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
-     templateMessage: {
-         hydratedTemplate: {
-           hydratedContentText: text.trim(),
-           locationMessage: { 
-           jpegThumbnail: fs.readFileSync('./media/shiraori.jpg') },
-           hydratedFooterText: wm,
-           hydratedButtons: [{       
-```
-
-### Video Menu Display
-```ts
-let message = await prepareWAMessageMedia({ video: fs.readFileSync('./media/shiro.mp4')}, { upload: conn.waUploadToServer })
-     const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
-     templateMessage: {
-         hydratedTemplate: {
-           videoMessage: message.videoMessage,
-           hydratedContentText: text.trim(),
-           hydratedFooterText: wm,
-           hydratedButtons: [{           	
-```
-----           
-
-
-## HOW TO CONNECT TO MONGODB WHEN RUN IN HEROKU
-
-* Create account and database in mongodb atlas [`watch here`](https://youtu.be/rPqRyYJmx2g)
-* when you already have a database, you just need to take mongourl
-* Put mongourl in Procfile `web: node . --db 'mongourl'`
-* Example `web: node . -- db 'mongodb+srv://ilman:<password>@cluster0.iiede.mongodb.net/ShiraoriBOT?retryWrites=true&w=majority'`
-
-
-## UNTUK PENGGUNA WINDOWS/VPS/RDP
-
-* Unduh & Instal Git [`Klik Disini`](https://git-scm.com/downloads)
-* Unduh & Instal NodeJS [`Klik Disini`](https://nodejs.org/en/download)
-* Unduh & Instal FFmpeg [`Klik Disini`](https://ffmpeg.org/download.html) (**Jangan Lupa Tambahkan FFmpeg ke variabel lingkungan PATH**)
-* Unduh & Instal ImageMagick [`Klik Disini`](https://imagemagick.org/script/download.php)
+## FOR TERMUX/UBUNTU/SSH USER
 
 ```bash
-git clone https://github.com/ilmanhdyt/ShiraoriBOT-Md
-cd ShiraoriBOT-Md
+apt update && apt upgrade
+apt install git -y
+apt install nodejs -y
+apt install ffmpeg -y
+apt install imagemagick -y
+git clone https://github.com/Nurutomo26/wabot-aq-md
+cd wabot-aq
 npm install
 npm update
-npm index
+```
+
+## INSTALL ON TERMUX WITH UBUNTU
+
+[ INSTALLING UBUNTU ]
+
+```bash
+apt update && apt full-upgrade
+apt install wget curl git proot-distro
+proot-distro install ubuntu
+echo "proot-distro login ubuntu" > $PREFIX/bin/ubuntu
+ubuntu
+```
+---------
+
+[ INSTALLING REQUIRED PACKAGES ]
+
+```bash
+ubuntu
+apt update && apt full-upgrade
+apt install wget curl git ffmpeg imagemagick build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev dbus-x11 ffmpeg2theora ffmpegfs ffmpegthumbnailer ffmpegthumbnailer-dbg ffmpegthumbs libavcodec-dev libavcodec-extra libavcodec-extra58 libavdevice-dev libavdevice58 libavfilter-dev libavfilter-extra libavfilter-extra7 libavformat-dev libavformat58 libavifile-0.7-bin libavifile-0.7-common libavifile-0.7c2 libavresample-dev libavresample4 libavutil-dev libavutil56 libpostproc-dev libpostproc55 graphicsmagick graphicsmagick-dbg graphicsmagick-imagemagick-compat graphicsmagick-libmagick-dev-compat groff imagemagick-6.q16hdri imagemagick-common libchart-gnuplot-perl libgraphics-magick-perl libgraphicsmagick++-q16-12 libgraphicsmagick++1-dev
 ```
 
 ---------
 
-## UNTUK PENGGUNA TERMUX
+[ INSTALLING NODEJS & WABOT-AQ ]
+
 ```bash
-pkg update && pkg upgrade
-pkg install git
-pkg install nodejs
-pkg install ffmpeg
-pkg install imagemagick
-pkg install yarn
-git clone https://github.com/ilmanhdyt/ShiraoriBOT-Md
-cd ShiraoriBOT-Md
-yarn
-npm i -g typescript
-tsc -p ./node_modules/@adiwajshing/baileys
+ubuntu
+curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
+apt install -y nodejs gcc g++ make
+git clone https://github.com/Nurutomo26/wabot-aq-md
+cd wabot-aq
+npm install
+npm update
+```
+
+---------
+
+## FOR WINDOWS/VPS/RDP USER
+
+* Download And Install Git [`Click Here`](https://git-scm.com/downloads)
+* Download And Install NodeJS [`Click Here`](https://nodejs.org/en/download)
+* Download And Install FFmpeg [`Click Here`](https://ffmpeg.org/download.html) (**Don't Forget Add FFmpeg to PATH enviroment variables**)
+* Download And Install ImageMagick [`Click Here`](https://imagemagick.org/script/download.php)
+
+```bash
+git clone https://github.com/Nurutomo26/wabot-aq-md
+cd wabot-aq
+npm install
+npm update
+```
+
+---------
+
+## Run
+
+```bash
 node .
 ```
 
-## UNTUK PENGGUNA HEROKU
+---------
 
-### Instal Buildpack
-* heroku/nodejs
-* https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git
-* https://github.com/DuckyTeam/heroku-buildpack-imagemagick.git*
+## Arguments `node . [--options] [<session name>]`
 
-## Installing the FFmpeg for Windows
-* Unduh salah satu versi FFmpeg yang tersedia dengan mengklik [di sini](https://www.gyan.dev/ffmpeg/builds/).
-* Extract file ke `C:\` path.
-* Ganti nama folder yang telah di-extract menjadi `ffmpeg`.
-* Run Command Prompt as Administrator.
-* Jalankan perintah berikut::
-```cmd
-> setx /m PATH "C:\ffmpeg\bin;%PATH%"
+### `--session <file name>`
+
+Use another session with another name, default is ```session.data.json```
+
+### `--prefix <prefixes>`
+
+* `prefixes` are seperated by each character
+Set prefix
+
+### `--server`
+
+Used for [heroku](https://heroku.com/) or scan through website
+
+### `--db <json-server-url>`
+
+Use external db instead of local db, 
+Example Server `https://json-server.nurutomo.repl.co/`
+
+Code: `https://repl.it/@Nurutomo/json-server`
+
+`node . --db 'https://json-server.nurutomo.repl.co/'`
+
+The server should have like this specification
+
+#### GET
+
+```http
+GET /
+Accept: application/json
 ```
-Jika berhasil, akan memberikanmu pesan seperti: `SUCCESS: specified value was saved`.
-* Sekarang setelah Anda menginstal FFmpeg, verifikasi bahwa itu berhasil dengan menjalankan perintah ini untuk melihat versi:
-```cmd
-> ffmpeg -version
+
+#### POST
+
+```http
+POST /
+Content-Type: application/json
+
+{
+ data: {}
+}
 ```
 
-# Thanks to
- [![Nurutomo](https://github.com/Nurutomo.png?size=150)](https://github.com/Nurutomo) | [![Ilman](https://github.com/ilmanhdyt.png?size=150)](https://github.com/ilmanhdyt) | [![Istikmal](https://github.com/BochilGaming.png?size=150)](https://github.com/BochilGaming)
-----|----|----
-[Nurutomo](https://github.com/Nurutomo) | [Ilman](https://github.com/ilmanhdyt) | [Istikmal](https://github.com/BochilGaming)
- Author | yg nambah fitur | yg punya sc
+### `--big-qr`
 
-## Donate
-- [Saweria](https://saweria.co/ilmanhdyt)
+If small qr unicode doesn't support
+
+### `--img`
+
+Enable image inspector through terminal
+
+### `--test`
+
+**Development** Testing Mode
+
+### `--trace`
+
+```js
+conn.logger.level = 'trace'
+```
+
+### `--debug`
+
+```js
+conn.logger.level = 'debug'
+```
+
+## Settings
+
+Now set using switch [enable.js](https://github.com/Nurutomo/wabot-aq/blob/master/plugins/enable.js), among others are
+
+```js
+anticall: false, // Auto Reject better than autoblock
+autoread: false, // If true all chats are automatically read
+nyimak: false, // No bot, just print received messages and add users to database
+restrict: false, // Enables restricted plugins (which can lead your number to be banned if used too often)
+self: false, // Activate self mode (Ignores other)
+pconly: false, // If that chat not from private bot, bot will ignore
+gconly: false, // If that chat not from group, bot will ignore
+jadibot: false, 
+```
+
+---------
+
+<a href="https://api.xteam.xyz"><img src="https://i.ibb.co/7j0vtwz/xlogo.png" width="100" height="100"></a> | [![Nurutomo](https://github.com/Nurutomo.png?size=100)](https://github.com/Nurutomo) | [![Ariffb](https://github.com/ariffb25.png?size=100)](https://github.com/ariffb25) | [![Ftwrr](https://github.com/Ftwrr.png?size=100)](https://github.com/Ftwrr) | [![Nurutomo26](https://github.com/Nurutomo26.png?size=100)](https://github.com/Nurutomo26)
+----|----|----|----
+[XTEAM](https://api.xteam.xyz/) | [Nurutomo](https://github.com/Nurutomo) | [Ariffb](https://github.com/ariffb25) | [Ftwrr](https://github.com/Ftwrr) | [Nurutomo26](https://github.com/Nurutomo26)
+Powered by XTEAM | Author / Creator | Most Active Contributor | 2nd Most Active Contributor | Recode
+
+
+NOTE: This project will not maintained after `27 June 2021`, that means no update. Feel free to anyone to continue this project :)
+
+Best Regards. wabot-aq-md
