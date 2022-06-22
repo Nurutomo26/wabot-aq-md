@@ -1,7 +1,8 @@
 let handler = async (m, { conn, isAdmin }) => {
-  if (m.fromMe) throw 'Nggk'
-  if (isAdmin) throw 'Padahal udah jadi admin'
-  await conn.groupMakeAdmin(m.chat, [m.sender])
+  if (m.fromMe) throw 'Tidak dapat mempromote diri sendiri!'
+  if (isAdmin) throw 'Kamu sudah menjadi admin!'
+  await conn.groupParticipantsUpdate(m.chat, [m.sender], 'promote')
+  m.reply('Berhasil promote owner bot!')
 }
 handler.command = /^admin.$/i
 handler.rowner = true
