@@ -23,16 +23,16 @@
         "ShiraoriBOT",
         "wabot-aq"
     ],
-    "homepage": "https://github.com/ilmanhdyt/ShiraoriBOT-Md",
+    "homepage": "https://github.com/Nurutomo26/wabot-aq-md",
     "author": {
         "name": "JayaGanz"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/ilmanhdyt/ShiraoriBOT-Md.git"
+        "url": "git+https://github.com/Nurutomo26/wabot-aq-md.git"
     },
     "bugs": {
-        "url": "https://github.com/ilmanhdyt/ShiraoriBOT-Md/issues"
+        "url": "https://github.com/Nurutomo26/wabot-aq-md/issues"
     },
     "license": "GPL-3.0-or-later",
     "dependencies": {
