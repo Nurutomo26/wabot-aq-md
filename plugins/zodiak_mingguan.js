@@ -45,7 +45,7 @@ ${rezeki}`
 	}
 }
 
-handler.help = ['Zodiakmingguan <zodiak>']
+handler.help = ['zodiakmingguan <zodiak>']
 handler.tags = ['internet']
 handler.command = /^zodiakmingguan?$/i
 handler.owner = false
@@ -57,7 +57,3 @@ handler.register = true
 handler.admin = false
 handler.botAdmin = false
 module.exports = handler
-
-/*
-@mrf.zvx
-*/

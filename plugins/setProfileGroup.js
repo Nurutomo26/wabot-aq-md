@@ -7,10 +7,10 @@ let handler = async (m, { conn, usedPrefix, command }) => {
         await conn.updateProfilePicture(m.chat, img)
     } else throw `kirim/balas gambar dengan caption *${usedPrefix + command}*`
 }
-handler.help = ['setpp']
+handler.help = ['setppgrup']
 handler.tags = ['group']
 
-handler.command = /^setpp$/i
+handler.command = /^setppgrup$/i
 
 handler.group = true
 handler.admin = true

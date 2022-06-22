@@ -47,7 +47,7 @@ ${rezeki}`
 	}
 }
 
-handler.help = ['Zodiakharian <zodiak>']
+handler.help = ['zodiakharian <zodiak>']
 handler.tags = ['internet']
 handler.command = /^zodiakharian?$/i
 handler.owner = false
@@ -59,7 +59,3 @@ handler.register = true
 handler.admin = false
 handler.botAdmin = false
 module.exports = handler
-
-/*
-@mrf.zvx
-*/

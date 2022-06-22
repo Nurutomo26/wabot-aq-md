@@ -10,8 +10,7 @@ let handler = async (m) => {
     m.reply('User tidak memiliki warn')
   }
 }
-
-handler.help = ['Delwarn @user']
+handler.help = ['delwarn @user']
 handler.tags = ['group']
 handler.command = /^delwarn$/i
 

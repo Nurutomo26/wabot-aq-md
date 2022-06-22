@@ -1,5 +1,5 @@
 let fetch = require('node-fetch')
-
+let { JSDOM } = require('jsdom')
 let handler = async (m, { conn, text, usedPrefix, command }) => {
   if (!text) throw `Uhm.. teksnya mana?\n\nContoh:\n${usedPrefix + command} naruto`
   let res = await fetch(API('https://api.jikan.moe', '/v3/search/anime', { q: text }))

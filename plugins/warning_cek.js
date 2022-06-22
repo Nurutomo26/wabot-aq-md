@@ -3,8 +3,7 @@ let handler = async (m, { conn }) => {
       let warn = global.db.data.users[target].warn
       m.reply(`Kamu memiliki Total Warning : ${warn}`)
 }
-
-handler.help = ['Cekwarn @user']
+handler.help = ['cekwarn @user']
 handler.tags = ['group']
 handler.command = /^cekwarn$/i
 
